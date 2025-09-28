@@ -82,7 +82,7 @@ while not salir:
     if estado_actual == ESTADO_JUGANDO and tiempo_actual - ultimo_spawn > SPAWN_DELAY:
         caracter = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         x = random.randint(LETTER_SIZE, WINDOW_WIDTH - LETTER_SIZE)
-        letras.append(Letra(caracter, x))
+        letras.append(Letra(caracter, x, puntos))  # Pasamos los puntos actuales
         ultimo_spawn = tiempo_actual
 
     # Actualizar letras

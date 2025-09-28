@@ -2,7 +2,7 @@
 
 Un juego educativo desarrollado en Python usando Pygame para ayudar a practicar mecanografía de una manera divertida.
 
-## Descripción
+## Descripción   
 
 En este juego, las letras caen desde la parte superior de la pantalla y el jugador debe escribirlas usando el teclado antes de que lleguen al fondo. Un hada mágica atrapará las letras correctamente tecleadas, aumentando la puntuación del jugador.
 

@@ -4,11 +4,20 @@ from .var import *
 from .color import *
 
 class Letra:
-    def __init__(self, caracter, x):
+    @staticmethod
+    def get_velocidad_nivel(puntos):
+        """Calcula la velocidad basada en los puntos actuales"""
+        nivel = puntos // 10  # Cada 10 puntos sube un nivel
+        velocidad_base = INITIAL_SPEED
+        if nivel > 0:
+            velocidad_base += (nivel * 0.5)  # Aumenta 0.5 por nivel
+        return velocidad_base
+
+    def __init__(self, caracter, x, puntos_actuales=0):
         self.caracter = caracter
         self.x = x
         self.y = 0
-        self.velocidad = INITIAL_SPEED
+        self.velocidad = self.get_velocidad_nivel(puntos_actuales)
         self.seleccionada = False
         self._crear_superficie()
     
